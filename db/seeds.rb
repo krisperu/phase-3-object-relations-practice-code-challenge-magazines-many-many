@@ -24,9 +24,10 @@ puts "Seeding subscriptions..."
   magazine_id = Magazine.ids.sample
   # Get a random price between 10 and 100:
   price = rand(10..100)
-
+  
   # TODO: create subscriptions! Remember, a subscription belongs to a reader
   # and a subscription belongs to a magazine.
+  Subscription.create(price: price, reader_id:rand(1..10), magazine_id: rand(1..8))
   
 end
 
